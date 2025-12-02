@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>message for u</title>
+<style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 150px; 
+        }
+
+    .container{
+        position:relative;
+        text-align:center;
+        cursor:pointer;
+    }
+    #closedEnvelope, #openEnvelope {
+        width:280px;
+        transition:opacity .7s;
+    }
+    #openEnvelope{
+        position:absolute;
+        top:0;
+        left:0;
+        opacity:0;
+    }
+    .letter{
+        width:240px;
+        background:white;
+        padding:20px;
+        border-radius:6px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.2);
+        position:absolute;
+        top:60px;
+        left:50%;
+        transform:translateX(-50%) translateY(40px);
+        opacity:0;
+        transition:all .8s;
+    }
+    .container.clicked #closedEnvelope{
+        opacity:0;
+    }
+    .container.clicked #openEnvelope{
+        opacity:1;
+    }
+    .container.clicked .letter{
+        opacity:1;
+        transform:translateX(-50%) translateY(-10px);
+    }
+</style>
+</head>
+<body>
+  
+<audio class="song" loop autoplay>
+        <source src="music.mp4">
+        </source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
+
+<div class="container" onclick="this.classList.add('clicked')">
+    <img id="closedEnvelope" src="envelope-closed.jpg" alt="Amplop Tertutup">
+    <img id="openEnvelope" src="envelope-open.jpg" alt="Amplop Terbuka">
+
+    <div class="letter">
+        <h3>hii ca!</h3>
+        <p>
+          good luck upraknya, I hope we all pass!! don't forget to pray.
+            do ur best,no matter the result u are learning and improving.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
