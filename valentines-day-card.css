@@ -43,7 +43,7 @@ body {
 
 .envelope .enveloper__card-text {
   padding: 10px 20px;
-  font-size: 42px;
+  font-size: 26px;
   margin: 0;
   color: black;
   font-family: 'Amatic SC', cursive;
@@ -168,4 +168,5 @@ body {
   to {
       -webkit-transform: translateY(-200px);
   }
+
 }
